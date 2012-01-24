@@ -36,7 +36,7 @@ public class SessaoTest {
 	}
 	
 	@Test
-	public void deveVenderOMaximoDeIngressosDisponiveis() throws Exception {
+	public void devePoderReservarTodosOsIngressosDisponiveis() throws Exception {
 		sessao.setTotalIngressos(3);
 		Assert.assertTrue(sessao.podeReservar(3));
 	}

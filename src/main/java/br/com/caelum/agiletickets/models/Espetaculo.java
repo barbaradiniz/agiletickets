@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
+import org.joda.time.DateTime;
 import org.joda.time.LocalDate;
 import org.joda.time.LocalTime;
 
@@ -80,7 +81,13 @@ public class Espetaculo {
 	}
 
 	public List<Sessao> criaSessoes(LocalDate inicio, LocalDate fim, LocalTime horario, Periodicidade periodicidade) {
-		return null;
+		Sessao sessao = new Sessao();
+		DateTime inicioComHora = inicio.toDateTime(horario);
+		sessao.setInicio(inicioComHora);
+		
+		sessoes.add(sessao);
+		
+		return sessoes;
 	}
 
 }

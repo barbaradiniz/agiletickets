@@ -27,7 +27,7 @@ public class EspetaculoTest {
 		
 		espetaculo.criaSessoes(inicio, fim, horario, Periodicidade.DIARIA);
 		
-		Assert.assertEquals(1, espetaculo.getSessoes().size());
+		Assert.assertEquals(2, espetaculo.getSessoes().size());
 		
 		Sessao sessao1 = espetaculo.getSessoes().get(0);
 		Assert.assertEquals(inicio.toDateTime(horario), sessao1.getInicio());
